@@ -67,6 +67,9 @@ target/
 # csv file
 *.csv
 
-# calendars
-DataScraping/calendars
-DataScraping/listings
+# calendars & listings
+data/calendars
+data/listings
+
+#pycharm logs
+.idea/
