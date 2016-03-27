@@ -60,3 +60,13 @@ target/
 
 #Ipython Notebook
 .ipynb_checkpoints
+
+#Output Json files
+*.json
+
+# csv file
+*.csv
+
+# calendars
+DataScraping/calendars
+DataScraping/listings
