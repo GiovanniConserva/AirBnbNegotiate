@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Hinty</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,600,800' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#Menu">
+                    <i class="material-icons menu-btn">menu</i>
+                </button>
+                <a class="navbar-brand" href="index.html">Hinty</a>
+            </div>
+            <div class="collapse navbar-collapse" id="Menu">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a class="menu-link" href="about.html">About</a></li>
+                    <li><a class="navbar-signin menu-link" href="#">Sign in</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CONTENT -->
+    <main class="content" role="main">
+        <div class="hero-background">
+            <img class="hero-img" src="img/skyline-buildings-new-york-skyscrapers.jpg" alt="New York Skyline">
+        </div>
+        <div class="container hero-search">
+            <form class="search-form" role="form">
+                <div class="container search-form--box">
+                    <div class="row">
+                        <div class="col-md-4 form-group">
+                            <i class="material-icons search-icon">location_city</i>
+                            <input type="text" class="form-control" name="location" placeholder="New York NY, United States" readonly disabled data-toggle="tooltip" data-placement="top" title="Soon more cities will be available!">
+                        </div>
+                        <div class="col-sm-5 col-md-4 form-calendar">
+                            <div class="form-group form-calendar--left">
+                                <i class="material-icons search-icon">date_range</i>  
+                                <input type="text" class="form-control check-in" name="check-in" placeholder="Check In">
+                            </div>
+                            <div class="form-group form-calendar--right">   
+                                <input type="text" class="form-control check-out" name="check-out" placeholder="Check Out">
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-md-2 form-group">
+                            <i class="material-icons search-icon bed">hotel</i>
+                            <select class="form-control">
+                                <option value="1">1 guest</option>
+                                <option value="2">2 guests</option>
+                                <option value="3">3 guests</option>
+                                <option value="4">4 guests</option>
+                                <option value="5">5 guests</option>
+                                <option value="6">6 guests</option>
+                                <option value="7">7 guests</option>
+                                <option value="8">8 guests</option>
+                                <option value="9">9 guests</option>
+                                <option value="10">10 guests</option>
+                                <option value="11">11 guests</option>
+                                <option value="12">12 guests</option>
+                                <option value="13">13 guests</option>
+                                <option value="14">14 guests</option>
+                                <option value="15">15 guests</option>
+                                <option value="16">16+ guests</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-3 col-md-2 form-group">
+                            <button type="submit" class="btn btn-default search-btn">Search</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="container payoff">
+            <div class="row">
+                <div class="col-sm-offset-2 col-sm-8">   
+                    <h1>Search for the <strong>best deals</strong> for your needs<br/> and save up to <span class="red">25%</span> off Airbnb’s listed prices.</h1>
+                </div>    
+            </div>
+        </div>
+        <div class="container tutorial">
+            <div class="row">
+                <div class="col-sm-8">   
+                    <h2 class="tutorial-title">How it works</h2>
+                    <p class="tutorial-copy"><span class="tutorial-number">1</span><strong>Find</strong> the house the most suits you</p>
+                    <p class="tutorial-copy"><span class="tutorial-number">2</span><strong>Learn</strong> your strong points with the provided tips</p>
+                    <p class="tutorial-copy"><span class="tutorial-number">3</span><strong>Connect</strong> with the host!</p>
+                </div>    
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.12.0/moment.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
