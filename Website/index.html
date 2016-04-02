@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Hinty</title>
+    <title>Negot.io | Home</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -20,7 +20,7 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#Menu">
                     <i class="material-icons menu-btn">menu</i>
                 </button>
-                <a class="navbar-brand" href="index.html">Hinty</a>
+                <a class="navbar-brand" href="index.html">Negot.io</a>
             </div>
             <div class="collapse navbar-collapse" id="Menu">
                 <ul class="nav navbar-nav navbar-right">
@@ -37,7 +37,7 @@
             <img class="hero-img" src="img/skyline-buildings-new-york-skyscrapers.jpg" alt="New York Skyline">
         </div>
         <div class="container hero-search">
-            <form class="search-form" role="form">
+            <form class="search-form" action="" role="form" id="searchForm">
                 <div class="container search-form--box">
                     <div class="row">
                         <div class="col-md-4 form-group">
@@ -55,7 +55,7 @@
                         </div>
                         <div class="col-sm-4 col-md-2 form-group">
                             <i class="material-icons search-icon bed">hotel</i>
-                            <select class="form-control">
+                            <select class="form-control" form="searchForm">
                                 <option value="1">1 guest</option>
                                 <option value="2">2 guests</option>
                                 <option value="3">3 guests</option>
@@ -75,7 +75,7 @@
                             </select>
                         </div>
                         <div class="col-sm-3 col-md-2 form-group">
-                            <button type="submit" class="btn btn-default search-btn">Search</button>
+                            <button type="button" class="btn btn-default search-btn" onclick="document.location.href='/results.html'">Search</button>
                         </div>
                     </div>
                 </div>

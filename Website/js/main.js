@@ -1,11 +1,13 @@
-$(document).ready(function(){
-    
-    $('.navbar-toggle').click(function(){
+$(document).ready(function () {
+
+    $('.navbar-toggle').click(function () {
         $('.menu-btn').toggleClass("white");
     });
-    
-    $('[data-toggle="tooltip"]').tooltip(); 
-    
+
+    // Search bar
+
+    $('[data-toggle="tooltip"]').tooltip();
+
     $('.check-in').datetimepicker({
         format: 'll',
         //minDate: moment()
@@ -26,5 +28,5 @@ $(document).ready(function(){
     $(".check-out").on("dp.change", function (e) {
         $('.check-in').data("DateTimePicker").maxDate(e.date);
     });
-    
+
 });
