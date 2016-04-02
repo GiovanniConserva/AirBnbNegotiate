@@ -6,6 +6,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/6.1.5/css/bootstrap-slider.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,600,800' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -32,9 +34,71 @@
     
     <!-- CONTENT -->
     <main class="container results-content" role="main">
-        <div class="filters">
-            <div class="filters-map">
+        <div class="filters-button">
+            <button type="button" class="filters-btn search-btn visible-xs-block" data-toggle="collapse" data-target="#filters">
+                <span class="filters-btn--text">Filters</span>
+            </button>
+        </div>
+        <div class="filters hidden-xs" id="filters">
+            <div class="filters-map hidden-xs hidden-sm">
                 
+            </div>
+            <div class="filters-copy">
+                <h2 class="filters-title">Filters</h2>
+                <div class="filters-section filters-range">
+                    <div class="row filters-row">
+                        <div class="col-xs-12 filters-label"><p>Price range</p></div>
+                        <div class="col-xs-12">
+                            <input type="text" class="price-range" value="" data-slider-min="10" data-slider-max="1000" data-slider-step="1" data-slider-value="[250,450]" data-slider-tooltip="hide"/>
+                        </div>
+                        <div class="filters-low--range col-xs-6">
+                            <p>$<span class="low-value">250</span></p>
+                        </div>
+                        <div class="filters-high--range col-xs-6">
+                            <p>$<span class="high-value">450</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="filters-section filters-roomtype">
+                    <div class="row filters-row">
+                        <div class="col-sm-12 filters-label"><p>Room Type</p></div>
+                        <div class="col-sm-11">  
+                            <div class="filters-radio col-sm-4">
+                                <input type="checkbox" value="Entire home/apt" name="room-type">
+                                <span>Entire home/apt</span>
+                            </div>
+                            <div class="filters-radio col-sm-4">
+                                <input type="checkbox" value="Private room" name="room-type">
+                                <span>Private room</span>
+                            </div>
+                            <div class="filters-radio col-sm-4">
+                                <input type="checkbox" value="Shared room" name="room-type">
+                                <span>Shared room</span>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+                <div class="filters-section filters-location">
+                    <div class="row filters-row">
+                        <div class="col-sm-12 filters-label"><p>Neighborhoods</p></div>
+                        <div class="col-sm-11">   
+                            <div class="filters-radio col-sm-4">
+                                <input type="checkbox" value="Manhattan" name="neighborhood">
+                                <span>Manhattan</span>
+                            </div>
+                            <div class="filters-radio col-sm-4">
+                                <input type="checkbox" value="Brooklyn" name="neighborhood">
+                                <span>Brooklyn</span>
+                            </div>
+                            <div class="filters-radio col-sm-4">
+                                <input type="checkbox" value="Midtown" name="neighborhood">
+                                <span>Midtown</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-1 filters-dropdown hidden-xs"><p><i class="material-icons">arrow_drop_down</i></p></div>
+                        <div class="col-sm-1 filters-dropdown hidden-sm hidden-md hidden-lg"><p class="other">Other</p></div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="listings">
@@ -98,7 +162,10 @@
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.12.0/moment.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/6.1.5/bootstrap-slider.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 

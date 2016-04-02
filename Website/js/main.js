@@ -28,5 +28,22 @@ $(document).ready(function () {
     $(".check-out").on("dp.change", function (e) {
         $('.check-in').data("DateTimePicker").maxDate(e.date);
     });
+    
+    // Collapse filter
+    $('.filters-btn').click(function(){
+        $('.filters').toggleClass('hidden-xs');
+    });
+    
+    // Slider
+    
+    $(".price-range").slider({});
+    $(".price-range").on("slide", function(slideEvt) {
+        $(".low-value").text(slideEvt.value[0]);
+        $(".high-value").text(slideEvt.value[1]);
+    });
+    $(".price-range").on("slideStop", function(slideEvt) {
+        $(".low-value").text(slideEvt.value[0]);
+        $(".high-value").text(slideEvt.value[1]);
+    });
 
 });
