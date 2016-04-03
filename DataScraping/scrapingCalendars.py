@@ -11,12 +11,13 @@ months= 4
 
 #ids of hosts
 listing_info = pd.read_csv('../data/listings/nyc_listings.csv')
-ids = listing_info['id']
+ids = list(listing_info['id'])
+random.shuffle(ids)
 
 calendars = dict()
 # failed_ids = pd.read_json('calendars/failed_ids.json')
 
-def getCalendar(ids, months, output_file = '../data/calendars/nyc_cal.json', logfile = '../data/calendars/failed_ids.json'):
+def getCalendar(ids, months, output_file = '../data/calendars/nyc_cal_4.json', logfile = '../data/calendars/failed_ids_4.json'):
     counter = 1
     lost_ids = []
     for s in ids:
@@ -35,11 +36,11 @@ def getCalendar(ids, months, output_file = '../data/calendars/nyc_cal.json', log
             data = json.load(response)
             calendars[s] = data
             counter += 1
-        except urllib2.HTTPError, e:
+        except:
             # ids.append(s)
             lost_ids.append(s)
 
-            print e.fp.read()
+            # print e.fp.read()
             time.sleep(15)
         time.sleep(random.uniform(0.5, 8))
 
