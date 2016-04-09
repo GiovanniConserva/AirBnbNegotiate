@@ -41,5 +41,21 @@ $(document).ready(function () {
         $(".low-value").text(slideEvt.value[0]);
         $(".high-value").text(slideEvt.value[1]);
     });
+    
+    // Modal
+    $('.signup').click(function(){
+        $('.login-btn').toggle();
+        $('.signup-btn').toggle();
+        $('.checkbox').toggleClass('hidden-check');
+        if($(this).hasClass('yes')){
+            $('.member').text('Not a member?');
+            $(this).text('Sign up').removeClass('yes');
+            $('.modal-secondblock form').attr('action','login');
+        } else {
+            $('.member').text('Already a member?');
+            $(this).text('Login').addClass('yes');
+            $('.modal-secondblock form').attr('action','signup');
+        }
+    });
 
 });
