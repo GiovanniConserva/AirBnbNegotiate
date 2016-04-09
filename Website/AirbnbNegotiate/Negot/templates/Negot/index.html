@@ -10,10 +10,51 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/6.1.5/css/bootstrap-slider.min.css">
     <link rel="stylesheet" href="/static/Negot/css/style.css">
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,600,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
+
+    <!-- MODAL AUTH -->
+    <div class="modal fade" id="auth" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-firstblock">
+                        <h4 class="modal-copy">Login with:</h4>
+                        <button type="submit" class="btn btn-default btn-success btn-block search-btn btn-google"><img src="/static/Negot/img/btn_google_dark_normal_ios.svg">Sign in with Google</button>
+                    </div>
+                    <div class="modal-secondblock">
+                        <h4 class="modal-copy"><span class="or">or</span></h4>
+                        <h4 class="modal-copy">Use or Negot.io account:</h4>
+                        <form role="form" action="">
+                            <div class="form-group">
+                                <input type="text" name="username" class="form-control" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" name="psw" class="form-control" placeholder="Password">
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="" checked><span class="remember-me">Remember me</span></label>
+                            </div>
+                            <button type="submit" value="submit" class="btn btn-default btn-success btn-block search-btn">Login</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <p class="remember-me">Not a member? <a href="#">Sign Up</a></p>
+                    <p class="remember-me">Forgot <a href="#">Password?</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- NAVBAR -->
     <nav class="navbar" role="navigation">
         <div class="container">
@@ -26,7 +67,7 @@
             <div class="collapse navbar-collapse" id="Menu">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a class="menu-link" href="about">About</a></li>
-                    <li><a class="navbar-signin menu-link" href="#">Sign in</a></li>
+                    <li><a class="navbar-signin menu-link" data-toggle="modal" href="#auth">Sign in</a></li>
                 </ul>
             </div>
         </div>
@@ -48,10 +89,10 @@
                         </div>
                         <div class="col-sm-5 col-md-4 form-calendar">
                             <div class="form-group form-calendar--left">
-                                <i class="material-icons search-icon">date_range</i>  
+                                <i class="material-icons search-icon">date_range</i>
                                 <input id="check-in" type="text" class="form-control check-in" name="check-in" placeholder="Check In">
                             </div>
-                            <div class="form-group form-calendar--right">   
+                            <div class="form-group form-calendar--right">
                                 <input id="check-out" type="text" class="form-control check-out" name="check-out" placeholder="Check Out">
                             </div>
                         </div>
@@ -87,19 +128,19 @@
         </div>
         <div class="container payoff">
             <div class="row">
-                <div class="col-sm-offset-2 col-sm-8">   
+                <div class="col-sm-offset-2 col-sm-8">
                     <h1>Search for the <strong>best deals</strong> for your needs<br/> and save up to <span class="red">25%</span> off Airbnb’s listed prices.</h1>
-                </div>    
+                </div>
             </div>
         </div>
         <div class="container tutorial">
             <div class="row">
-                <div class="col-sm-8">   
+                <div class="col-sm-8">
                     <h2 class="tutorial-title">How it works</h2>
                     <p class="tutorial-copy"><span class="tutorial-number">1</span><strong>Find</strong> the house the most suits you</p>
                     <p class="tutorial-copy"><span class="tutorial-number">2</span><strong>Learn</strong> your strong points with the provided tips</p>
                     <p class="tutorial-copy"><span class="tutorial-number">3</span><strong>Connect</strong> with the host!</p>
-                </div>    
+                </div>
             </div>
         </div>
     </main>
@@ -108,7 +149,7 @@
     <footer class="footer">
         <div class="container">
             <div class="row">
-                
+
             </div>
         </div>
     </footer>

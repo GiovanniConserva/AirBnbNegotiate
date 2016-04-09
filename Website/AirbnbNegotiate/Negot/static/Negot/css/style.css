@@ -59,7 +59,6 @@ strong {
 
 /* CONTENT */
 
-
 /* hero image */
 
 .hero-background {
@@ -237,6 +236,51 @@ select.form-control {
     position: relative;
 }
 
+/* Modal */
+
+.modal-header {
+    border: none;
+    padding: 10px 15px 0;
+}
+.modal-body .form-control {
+    padding-left: 14px;
+}
+.modal-copy {
+    margin-bottom: 25px;
+    text-align: center;
+}
+.modal-firstblock {
+    border-bottom: 1px solid #ffa000;
+    padding-bottom: 30px;
+}
+.modal-secondblock {
+    position: relative;
+    top: -22px;
+}
+.btn-google {
+    background-color: #fff;
+    border: 1px solid rgb(204,204,204);
+    border-radius: 2px;
+    color: rgba(0,0,0,0.54);
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+.btn-google img {
+    height: 90%;
+    margin-right: 10px;
+}
+.btn-google:hover {
+    background-color: #fff;
+    border: 1px solid rgb(204,204,204);
+    color: rgba(0,0,0,0.54);
+}
+.remember-me {
+    font-size: 0.85em;
+}
+.or {
+    background-color: #fff;
+    padding: 0 24px;
+}
 
 /* RESULT PAGE */
 
@@ -505,6 +549,25 @@ footer {
         -webkit-transform: translateY(-10px);
         transform: translateY(-10px);
     }
+    .menu-link.live {
+        color: #fff;
+    }
+    .menu-link.live::after {
+        background-color: #fff;
+        bottom: 0;
+        content: "";
+        height: 2px;
+        left: 0;
+        margin: 0 5%;
+        opacity: 1;
+        position: absolute;
+        -ms-transform: translateY(-10px);
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px);
+        -webkit-transition: opacity 0.3s ease, transform 0.3s ease;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        width: 90%;
+    }
     /* CONTENT */
     .hero-background {
         height: 600px;
@@ -538,6 +601,13 @@ footer {
         font-size: 1.6em;
         padding: 1px 13px 4px;
         top: 2px;
+    }
+    /*Modal*/
+    .modal-body {
+        padding: 15px 120px;
+    }
+    .modal-footer {
+        padding: 15px 120px;
     }
     /* RESULT PAGE */
     .filters-title {
