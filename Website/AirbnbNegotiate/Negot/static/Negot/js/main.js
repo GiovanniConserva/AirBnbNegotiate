@@ -10,17 +10,13 @@ $(document).ready(function () {
 
     $('.check-in').datetimepicker({
         format: 'll',
+        minDate: 'moment'
         //minDate: moment()
     });
     $('.check-out').datetimepicker({
         format: 'll',
-        useCurrent: false //Important! See issue #1075
-    });
-    $(".check-in").on("dp.show", function (e) {
-        $(this).data("DateTimePicker").minDate(moment());
-    });
-    $(".check-out").on("dp.show", function (e) {
-        $(this).data("DateTimePicker").minDate(moment());
+        useCurrent: false, //Important! See issue #1075
+        minDate: 'moment'
     });
     $(".check-in").on("dp.change", function (e) {
         $('.check-out').data("DateTimePicker").minDate(e.date);

@@ -185,6 +185,10 @@ input[name="location"]::-ms-placeholder {
     background-color: #ff5252;
     border: none;
 }
+select.form-control {
+    -webkit-appearance: none;
+    cursor: pointer;
+}
 
 
 /* Payoff */
