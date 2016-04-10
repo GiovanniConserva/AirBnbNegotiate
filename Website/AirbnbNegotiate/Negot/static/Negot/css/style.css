@@ -423,9 +423,12 @@ select.form-control {
 }
 
 .list-item--title {
-    font-size: 1em;
-    font-weight: 400;
+    font-size: 1.3em;
+    font-weight: 600;
     margin: 0 0 6px;
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
 }
 
 .list-item--subtitle {
@@ -667,7 +670,7 @@ footer {
         width: 140px;
     }
     .list-item--title {
-        font-size: 2em;
+        font-size: 1.8em;
     }
     .list-item--subtitle {
         font-size: 1em;
