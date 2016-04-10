@@ -161,7 +161,7 @@
                         <img class="list-item--img" src= "{{ listing.property_id.picture_url }}" style="width:150px;height:150px;" />
                     </div>
                     <div class="list-item--copy">
-                        <h2 class="list-item--title"><a  href={{ listing.property_id.url }}>{{ listing.property_id.name }}</a></h2>
+                        <h2 class="list-item--title" data-toggle="tooltip" data-placement="top" title="{{ listing.property_id.name }}"><a  href={{ listing.property_id.url }}>{{ listing.property_id.name }}</a></h2>
                         <p class="list-item--subtitle"><span class="list-item--hostname"><a  href={{ listing.property_id.host_url }}>{{ listing.property_id.host_name }}</a></span> &middot; <span class="list-item--reviews">{{ listing.property_id.number_of_reviews }}</span> reviews &middot; <span class="list-item--stars"><i class="material-icons star">star</i><i class="material-icons star">star</i><i class="material-icons star">star</i><i class="material-icons star">star_half</i><i class="material-icons star">star_border</i></span></p>
                         <div class="list-item--price">
                             <p class="price-copy">Original price</p>
