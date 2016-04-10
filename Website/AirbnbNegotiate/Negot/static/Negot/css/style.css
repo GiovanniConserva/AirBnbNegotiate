@@ -274,12 +274,34 @@ select.form-control {
     border: 1px solid rgb(204,204,204);
     color: rgba(0,0,0,0.54);
 }
+.checkbox {
+    opacity: 1;
+    -webkit-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+}
 .remember-me {
     font-size: 0.85em;
 }
 .or {
     background-color: #fff;
     padding: 0 24px;
+}
+.btn-block + .btn-block {
+    margin-top: 0;
+}
+.signup-btn {
+    background-color: #ff5454;
+    display: none;
+}
+.signup-btn:hover {
+    background-color: #ffa000;
+}
+.hidden-check {
+    opacity: 0;
+}
+.signup {
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 /* RESULT PAGE */
@@ -726,6 +748,12 @@ footer {
     /* FOOTER */
     .footer {
         top: 480px;
+    }
+    .footer-fixed {
+        bottom: 0;
+        left: 0;
+        position: fixed;
+        width: 100%;
     }
 }
 
