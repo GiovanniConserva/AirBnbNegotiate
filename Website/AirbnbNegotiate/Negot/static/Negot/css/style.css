@@ -401,8 +401,8 @@ select.form-control {
 }
 
 .list-item--title {
-    font-size: 1.6em;
-    font-weight: 800;
+    font-size: 1em;
+    font-weight: 400;
     margin: 0 0 6px;
 }
 

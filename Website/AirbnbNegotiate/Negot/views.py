@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse, HttpResponseRedirect
-from .models import Search, User
+from .models import Search, User, Availability, Listing
 from django.core.urlresolvers import reverse
 import datetime
 
@@ -17,9 +17,16 @@ def results(request):
 def search(request):
     search = Search()
     try:
-        search.checkin_date = datetime.datetime.strptime(request.POST['check-in'], '%b %d, %Y').strftime('%Y-%m-%d')
-        search.chechout_date = datetime.datetime.strptime(request.POST['check-out'], '%b %d, %Y').strftime('%Y-%m-%d')
-        search.destination = request.POST.get('destination', 'NYC')
+        checkin_date = datetime.datetime.strptime(request.POST['check-in'], '%b %d, %Y').strftime('%Y-%m-%d')
+        checkout_date = datetime.datetime.strptime(request.POST['check-out'], '%b %d, %Y').strftime('%Y-%m-%d')
+        destination = request.POST.get('destination', 'New York NY, United States')
+
+        search.checkin_date = checkin_date
+        search.chechout_date = checkout_date
+        search.destination = destination
+
+        results = Availability.objects.filter(start_date = checkin_date, end_date = checkout_date)
+        print [i.property_id.picture_url for i in results]
     except (KeyError, Search.DoesNotExist):
         # Redisplay the index form with error Infomation.
         return render(request, 'Negot/index.html')
@@ -28,4 +35,4 @@ def search(request):
         # Always return an HttpResponseRedirect after successfully dealing
         # with POST data. This prevents data from being posted twice if a
         # user hits the Back button.
-        return render(request, 'Negot/results.html')
+        return render(request, 'Negot/results.html', {'listings': results, 'checkin_date': checkin_date, 'checkout_date': checkout_date})
