@@ -349,6 +349,19 @@ select.form-control {
     text-align: right;
 }
 
+.filters-location {
+    margin-bottom: 0;
+}
+
+.filters-more {
+    border-top: 1px solid #212121;
+    display: none;
+    padding-top: 20px;
+}
+.filters-more .col-sm-11 {
+    margin-bottom: 5px;
+}
+
 .slider.slider-horizontal {
     width: 100%;
 }
@@ -640,6 +653,9 @@ footer {
     }
     .filters-section {
         margin-bottom: 20px;
+    }
+    .filters-location {
+        margin-bottom: 0;
     }
     .filters-dropdown {
         cursor: pointer;

@@ -30,6 +30,10 @@ $(document).ready(function () {
         $('.filters').toggleClass('hidden-xs');
     });
     
+    $('.filters-dropdown').click(function(){
+        $('.filters-more').toggle();
+    });
+    
     // Slider
     
     $(".price-range").slider({});
