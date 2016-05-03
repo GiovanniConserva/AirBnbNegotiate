@@ -94,7 +94,8 @@
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/6.1.5/bootstrap-slider.min.js"></script>
-    <script src="/static/Negot/js/main.js"></script>
+    {% load static from staticfiles %}
+    <script src="{% static "Negot/js/main.js" %}" ></script>
 </body>
 
 </html>
